@@ -11,7 +11,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Toast;
 
 
 /**
@@ -19,11 +18,9 @@ import android.widget.Toast;
  */
 public class CategoryFragment extends Fragment implements View.OnClickListener {
 
-
     public CategoryFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -53,7 +50,7 @@ public class CategoryFragment extends Fragment implements View.OnClickListener {
             mDetailCategoryFragment.setDescription(description);
 
             FragmentManager mFragmentManager = getFragmentManager();
-            if (mFragmentManager!= null) {
+            if (mFragmentManager != null) {
                 FragmentTransaction mFragmentTransaction = mFragmentManager.beginTransaction();
                 mFragmentTransaction.replace(R.id.activity_main_frame_container,
                         mDetailCategoryFragment,

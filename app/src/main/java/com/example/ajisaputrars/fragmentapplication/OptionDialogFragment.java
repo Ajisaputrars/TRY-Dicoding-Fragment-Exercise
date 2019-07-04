@@ -25,7 +25,6 @@ public class OptionDialogFragment extends DialogFragment implements View.OnClick
     RadioButton rbSaf, rbMou, rbLvg, rbMoyes;
     OnOptionDialogListener optionDialogListener;
 
-
     public OptionDialogFragment() {
         // Required empty public constructor
     }
@@ -61,6 +60,7 @@ public class OptionDialogFragment extends DialogFragment implements View.OnClick
             this.optionDialogListener = detailCategoryFragment.optionDialogListener;
         }
     }
+
     @Override
     public void onDetach() {
         super.onDetach();

@@ -26,12 +26,13 @@ public class DetailCategoryFragment extends Fragment implements View.OnClickList
     Button btnShowDialog;
 
     public static String EXTRA_NAME = "extra_name";
-    public static String EXTRA_DESCRIPTION = "extra_description";
+    // --Commented out by Inspection (2019-07-05 00:52):public static String EXTRA_DESCRIPTION = "extra_description";
     private String description;
 
     public String getDescription() {
         return description;
     }
+
     public void setDescription(String description) {
         this.description = description;
     }
