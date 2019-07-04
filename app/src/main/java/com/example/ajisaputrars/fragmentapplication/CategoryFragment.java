@@ -41,14 +41,25 @@ public class CategoryFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-        Toast.makeText(getActivity(), "Sss", Toast.LENGTH_SHORT).show();
         if (view.getId() == R.id.btn_detail_category) {
+
+            DetailCategoryFragment mDetailCategoryFragment = new DetailCategoryFragment();
+
+            Bundle mBundle = new Bundle();
+            mBundle.putString(DetailCategoryFragment.EXTRA_NAME, "Lifestyle");
+            mDetailCategoryFragment.setArguments(mBundle);
+
+            String description = "Kategori ini akan berisi produk-produk lifestyle";
+            mDetailCategoryFragment.setDescription(description);
+
             FragmentManager mFragmentManager = getFragmentManager();
-            if (mFragmentManager != null) {
-                HomeFragment mHomeFragment = new HomeFragment();
+            if (mFragmentManager!= null) {
                 FragmentTransaction mFragmentTransaction = mFragmentManager.beginTransaction();
-                mFragmentTransaction.replace(R.id.activity_main_frame_container, mHomeFragment, HomeFragment.class.getSimpleName());
-//                mFragmentTransaction.addToBackStack(null);
+                mFragmentTransaction.replace(R.id.activity_main_frame_container,
+                        mDetailCategoryFragment,
+                        DetailCategoryFragment.class.getSimpleName()
+                );
+                mFragmentTransaction.addToBackStack(null);
                 mFragmentTransaction.commit();
             }
         }
